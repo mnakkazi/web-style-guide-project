@@ -1,28 +1,23 @@
 // IMAGES
 
-.img-avatar {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.img {
+  &-avatar {
+    @include disp;
     margin-top: 10px;
     max-width: $width-max; 
     max-height: 100%;
   }
   
-  .img-frame {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  &-frame {
+    @include disp;
     margin-top: 10px;
     max-width: $width-max;
     padding: 13px;
     border: 1px solid #ccc;
   }
-  
-  .img-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+  &-logo {
+    @include disp;
   }
 
   @media (min-width: $break) {
@@ -32,3 +27,4 @@
       margin-right: initial;
     }
   }
+}

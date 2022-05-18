@@ -23,9 +23,7 @@
     padding: 0 10px;
     @media (min-width: $break) {
         max-width: 1400px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        @include disp;
       }
   }
   
