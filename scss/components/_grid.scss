@@ -1,22 +1,7 @@
-// GRID 
-
-* {
-    box-sizing: border-box;
-} 
-
-.headline-primary {
-    margin-left: 10px;
-  }
-
-.blockquote {
-    margin-left: 20px;
-    padding-left: 20px;
-    border-left: 8px solid $theme-color-primary;
-    border-radius: 5px;
-  }  
+// GRID   
 
 .card {
-    flex-basis: 100%;
+    flex-basis: $basis;
   }
 
 .container {
@@ -28,33 +13,28 @@
   }
   
 .row {
-    display: flex;
-    flex-direction: column;
+   @include flexbox (flex, $dir: column);
     padding: 1em 10px;
     @media (min-width: $break) {
-        flex-direction: row;
+        @include flexbox ($dir: row)
     }
   }
   
 [class^=col] {
     margin-top: 10px;
-    flex-basis: 100%;
+    flex-basis: $basis;
     min-height: 25px;
     padding: 10px;
     border-radius: 5px;
     @media (min-width: $break) {
-       display: flex;
-       justify-content: center;
+       @include flexbox (flex, $just: center, $align: center);
        margin-top: 0;
-       align-items: center;
     }
   } 
 
 @media (min-width: $break) {
     
     .centered {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      @include disp;
     }
   } 

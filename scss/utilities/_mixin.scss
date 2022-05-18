@@ -1,7 +1,22 @@
 // MIXINS 
 
-@mixin disp {
+@mixin disp ($margin-top: null, 
+             $max-wid: null) {
+    margin-top: $margin-top;
+    max-width: $max-wid;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+@mixin flexbox ($flex: flex, 
+                $dir: null, 
+                $wrap: null, 
+                $just: null, 
+                $align: null) {
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $just;
+    align-items: $align;
 }

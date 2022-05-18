@@ -2,16 +2,12 @@
 
 .img {
   &-avatar {
-    @include disp;
-    margin-top: 10px;
-    max-width: $width-max; 
+    @include disp(10px, $width-max); 
     max-height: 100%;
   }
   
   &-frame {
-    @include disp;
-    margin-top: 10px;
-    max-width: $width-max;
+    @include disp(10px, $width-max);
     padding: 13px;
     border: 1px solid #ccc;
   }
